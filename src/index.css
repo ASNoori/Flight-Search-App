@@ -1,13 +1,133 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #172014;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  color: #b4bfb1;
+}
+.dropdown-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+.dropdown-search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+.dropdown-search-container p {
+  position: absolute;
+  top: -8px;
+  color: #b4bfb1;
+  z-index: 1;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.dropdown-container::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  pointer-events: none;
+}
+.dropdown-container label {
+  font-size: 12px;
+  color: #b4bfb1;
+  padding: 0 10px;
+  position: absolute;
+  top: 6px;
+  font-weight: 500;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+select {
+  appearance: none;
+  background-color: #181818;
+  border: none;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  width: 250px;
+  color: #b4bfb1;
+  border-radius: 10px;
+  padding: 10px 0px 0px 10px;
+}
+select:focus {
+  outline: none;
+}
+select option {
+  color: #b4bfb1;
+}
+.search-btn {
+  background-color: #38b8a6;
+  color: #f4fbfa;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: transparent;
+  font-weight: 500;
+  font-size: 16px;
+}
+img {
+  width: 80px;
+  margin-top: 20px;
+}
+.flight-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-details {
+  color: #fff;
+  background-color: #1a4c2f;
+  height: auto;
+  width: 300px;
+  margin: 20px;
+  border-radius: 20px;
+}
+.para-heading {
+  margin-top: 12px;
+}
+.para-heading1 {
+  font-size: 32px;
+  margin: 5px 0px 0px 0px;
+  font-weight: bold;
+}
+.min {
+  font-size: 18px;
+  font-weight: normal;
+}
+.para-heading2 {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.spacing {
+  padding-bottom: 10px;
+}
+.card{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.err-msg{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
